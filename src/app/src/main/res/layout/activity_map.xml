@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/uscmapLL"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:layout_marginRight="0dp"
+    android:layout_marginLeft="0dp"
+    tools:context=".Activity.MapActivity"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/profilesection"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/profileButton"
+            android:layout_width="53dp"
+            android:layout_height="53dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/viewpro"
+            android:backgroundTint="@color/uscRed"
+            android:onClick="onClickProfile"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/notificationButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="top|right"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/noti_icon"
+            android:backgroundTint="@color/uscRed"
+            android:onClick="onClickNotification" />
+
+        <TextView
+            android:id="@+id/profileText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="25dp"
+            android:layout_toRightOf="@+id/profileButton"
+            android:text="VIEW PROFILE"
+            android:textColor="@color/uscRed"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:onClick="onClickProfile"/>
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/uscmapRL"
+        android:layout_below="@id/profilesection"
+        android:layout_width="match_parent"
+        android:layout_height="1000dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="0dp">
+
+        <ImageView
+            android:id="@+id/uscmap"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:adjustViewBounds="true"
+            android:src="@drawable/uscmap" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button1"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="157dp"
+            android:layout_marginTop="135dp"
+            android:background="@drawable/gymicon"
+            android:onClick="onClickLyon" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button2"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="269dp"
+            android:layout_marginTop="112dp"
+            android:background="@drawable/gymicon"
+            android:onClick="onClickVill" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/window"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white">
+
+<!--        <androidx.appcompat.widget.AppCompatButton-->
+<!--            android:id="@+id/summaryButton"-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:onClick="onClickSummary"-->
+<!--            android:text="View All Booking Information"-->
+<!--            android:backgroundTint="@color/uscYellow"-->
+<!--            android:alpha="0.7"/>-->
+
+        <LinearLayout
+            android:onClick="onClickSummary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="top">
+
+            <TextView
+                android:id="@+id/summarybtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:gravity="center"
+                android:onClick="onClickSummary"
+                android:text="UPCOMING BOOKINGS"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:onClick="onClickSummary"
+                android:id="@+id/recyclerMAP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/darker_gray"
+                android:padding="4dp"
+                android:scrollbars="vertical" />
+
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>
+

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "416519495436",
+    "project_id": "uscrecapp-f9cb9",
+    "storage_bucket": "uscrecapp-f9cb9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:416519495436:android:b27129f8fc1a2f479c7329",
+        "android_client_info": {
+          "package_name": "com.example.uscrecapp_team28"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "416519495436-e3c6qcir5vrk22jher7m985s6ul4h2jf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAmsHos9CBCjYcMhLeDtPF0jh9TDjhlqBo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "416519495436-e3c6qcir5vrk22jher7m985s6ul4h2jf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

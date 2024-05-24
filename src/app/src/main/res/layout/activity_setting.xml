@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.SettingActivity"
+    android:background="@drawable/tommy">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/profile_back"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|left"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:alpha="0.7"
+        android:onClick="onClickSettingBack"
+        android:text="Back"
+        android:textColor="#fff"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="@color/white"
+        android:alpha="0.8">
+
+        <TextView
+            android:id="@+id/notification_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:text="Currently, you will receive notification XXX minutes before your next reservation"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchMAIN"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="10sp"
+            android:scaleX="2.5"
+            android:scaleY="2.5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textStyle="bold"/>
+
+        <RelativeLayout
+            android:id="@+id/textblock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/textremindbefore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="Remind me "
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/textremindedit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/textremindbefore"
+                android:backgroundTint="@android:color/darker_gray"
+                android:hint=" enter "
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textremindafter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="10dp"
+                android:text="min before next reservation"
+                android:layout_toRightOf="@+id/textremindedit"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+
+
+<!--        <EditText-->
+<!--            android:id="@+id/username"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@id/wrong"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:background="#30ffffff"-->
+<!--            android:drawableLeft="@drawable/ic_baseline_person_24"-->
+<!--            android:drawablePadding="20dp"-->
+<!--            android:hint="Username"-->
+<!--            android:padding="20dp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textColorHint="@color/white"-->
+<!--            android:textSize="20dp" />-->
+
+<!--        <androidx.appcompat.widget.SwitchCompat-->
+<!--            android:id="@+id/switch10"-->
+<!--            android:scaleX="2.5"-->
+<!--            android:scaleY="2.5"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center_horizontal" />-->
+
+<!--        <androidx.appcompat.widget.SwitchCompat-->
+<!--            android:id="@+id/switch30"-->
+<!--            android:scaleX="2.5"-->
+<!--            android:scaleY="2.5"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center_horizontal" />-->
+
+<!--        <androidx.appcompat.widget.SwitchCompat-->
+<!--            android:id="@+id/switch60"-->
+<!--            android:scaleX="2.5"-->
+<!--            android:scaleY="2.5"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center_horizontal" />-->
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/confirm_noti_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:alpha="0.7"
+            android:onClick="onClickConfirmChange"
+            android:text="Confirm Change"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:layout_gravity="center_horizontal"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/wrongwrong"
+            android:layout_below="@id/signin"
+            android:text="Please enter an Integer only"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:textColor="@color/uscRed"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+</RelativeLayout>
